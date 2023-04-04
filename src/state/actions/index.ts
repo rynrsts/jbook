@@ -3,8 +3,8 @@ import { CellTypes } from '../cell';
 
 export type Direction = 'up' | 'down';
 
-export interface InsertCellBeforeAction {
-  type: ActionType.INSERT_CELL_BEFORE;
+export interface InsertCellAfterAction {
+  type: ActionType.INSERT_CELL_AFTER;
   payload: {
     id: string | null;
     type: CellTypes;
@@ -33,7 +33,7 @@ export interface MoveCellAction {
 }
 
 export type Action =
-  | InsertCellBeforeAction
+  | InsertCellAfterAction
   | DeleteCellAction
   | UpdateCellAction
   | MoveCellAction;
